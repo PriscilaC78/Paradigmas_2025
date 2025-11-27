@@ -1,0 +1,65 @@
+﻿<UserControl x:Class="proyecto_paradigmas_2025.Views.ListaReparacionesView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="900">
+
+    <Grid Background="White" Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="0,0,0,20">
+            <TextBlock Text="Gestión de Reparaciones" FontSize="24" FontWeight="Bold" Foreground="#2C3E50"/>
+            <TextBlock Text="Listado completo de equipos en taller e historial." Foreground="Gray"/>
+        </StackPanel>
+
+        <DataGrid Grid.Row="1" 
+                  ItemsSource="{Binding ListaReparaciones}"
+                  AutoGenerateColumns="False"
+                  CanUserAddRows="False"
+                  IsReadOnly="True"
+                  HeadersVisibility="Column"
+                  GridLinesVisibility="Horizontal"
+                  Background="White"
+                  BorderBrush="#DDDDDD"
+                  RowHeight="35">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="#" Binding="{Binding Id}" Width="40"/>
+
+                <DataGridTextColumn Header="Cliente" Binding="{Binding Cliente.NombreCompleto}" Width="150"/>
+
+                <DataGridTextColumn Header="Equipo" Binding="{Binding Equipo.NombreCompleto}" Width="150" FontWeight="Bold"/>
+
+                <DataGridTextColumn Header="Info Técnica (Polimorfismo)" Binding="{Binding Equipo.DatosTecnicos}" Width="*"/>
+
+                <DataGridTextColumn Header="Estado" Binding="{Binding Estado}" Width="120"/>
+
+                <DataGridTextColumn Header="Total $" Binding="{Binding TotalPagar, StringFormat=c}" Width="80"/>
+
+                <DataGridTemplateColumn Width="80">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Ver" Background="#3498DB" Foreground="White" BorderThickness="0" Cursor="Hand"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+            </DataGrid.Columns>
+
+            <DataGrid.RowStyle>
+                <Style TargetType="DataGridRow">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#F5F5F5"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.RowStyle>
+        </DataGrid>
+    </Grid>
+</UserControl>
