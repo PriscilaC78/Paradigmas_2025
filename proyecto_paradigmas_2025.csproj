@@ -60,12 +60,24 @@
     <Compile Include="Models\Reparacion.cs" />
     <Compile Include="Services\ServicioFacturacion.cs" />
     <Compile Include="ViewModels\DashboardViewModel.cs" />
+    <Compile Include="ViewModels\DetalleClienteViewModel.cs" />
+    <Compile Include="ViewModels\DetalleReparacionViewModel.cs" />
+    <Compile Include="ViewModels\GestionClientesViewModel.cs" />
     <Compile Include="ViewModels\GestionInventarioViewModel.cs" />
     <Compile Include="ViewModels\GestionReparacionesViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\NuevoIngresoViewModel.cs" />
     <Compile Include="Views\DashboardView.xaml.cs">
       <DependentUpon>DashboardView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DetalleClienteView.xaml.cs">
+      <DependentUpon>DetalleClienteView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DetalleReparacionView.xaml.cs">
+      <DependentUpon>DetalleReparacionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListaClientesView.xaml.cs">
+      <DependentUpon>ListaClientesView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ListaReparacionesView.xaml.cs">
       <DependentUpon>ListaReparacionesView.xaml</DependentUpon>
@@ -90,6 +102,18 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Views\DashboardView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DetalleClienteView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DetalleReparacionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ListaClientesView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

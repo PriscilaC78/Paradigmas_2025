@@ -44,7 +44,10 @@
                 <DataGridTemplateColumn Width="80">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Content="Ver" Background="#3498DB" Foreground="White" BorderThickness="0" Cursor="Hand"/>
+                            <Button Content="Ver" 
+                                Command="{Binding DataContext.VerDetalleCommand, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                                CommandParameter="{Binding}"
+                                Background="#3498DB" Foreground="White" BorderThickness="0" Cursor="Hand"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>

@@ -21,14 +21,16 @@ namespace proyecto_paradigmas_2025.ViewModels
         public ICommand MostrarDashboardCommand { get; set; }
         public ICommand MostrarReparacionesCommand { get; set; }
         public ICommand MostrarIngresoCommand { get; set; }
+        public ICommand MostrarClientesCommand { get; set; }
 
         // 3. Constructor
         public MainViewModel()
         {
             // Inicializar los comandos
             MostrarDashboardCommand = new RelayCommand(o => VistaActual = new DashboardViewModel());
-            MostrarReparacionesCommand = new RelayCommand(o => VistaActual = new GestionReparacionesViewModel());
+            MostrarReparacionesCommand = new RelayCommand(o => VistaActual = new GestionReparacionesViewModel(this)); // Pasamos 'this'
             MostrarIngresoCommand = new RelayCommand(o => VistaActual = new NuevoIngresoViewModel()); // (Descomentar cuando crees ese VM)
+            MostrarClientesCommand = new RelayCommand(o => VistaActual = new GestionClientesViewModel(this));
 
             // Vista por defecto al arrancar
             VistaActual = new DashboardViewModel();

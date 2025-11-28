@@ -25,6 +25,17 @@
             <v:NuevoIngresoView/>
         </DataTemplate>
 
+        <DataTemplate DataType="{x:Type vm:DetalleReparacionViewModel}">
+            <v:DetalleReparacionView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type vm:GestionClientesViewModel}">
+            <v:ListaClientesView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:DetalleClienteViewModel}">
+            <v:DetalleClienteView/>
+        </DataTemplate>
+
     </Window.Resources>
 
     <Grid>
@@ -47,6 +58,10 @@
 
                 <Button Content="Nuevo Ingreso" 
                         Command="{Binding MostrarIngresoCommand}"
+                        Height="40" Margin="0,5" Background="#34495E" Foreground="White" BorderThickness="0"/>
+
+                <Button Content="Clientes" 
+                        Command="{Binding MostrarClientesCommand}"
                         Height="40" Margin="0,5" Background="#34495E" Foreground="White" BorderThickness="0"/>
             </StackPanel>
         </Border>
