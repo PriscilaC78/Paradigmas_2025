@@ -1,18 +1,61 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="proyecto_paradigmas_2025.Models.Base.EntidadBase">
-    <Position X="7.25" Y="1" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Models\Base\EntidadBase.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="proyecto_paradigmas_2025.Models.Equipos.Celular">
-    <Position X="9" Y="3" Width="1.5" />
+    <Position X="7.25" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAEAAAAAAAAAAAAAABAAAAAAAAAAIAAAAAABAAAAAAA=</HashCode>
       <FileName>Models\Equipos\Celular.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="proyecto_paradigmas_2025.Models.Equipos.Computadora">
+    <Position X="3" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAABAAAABAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Models\Equipos\Computadora.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="proyecto_paradigmas_2025.Models.Equipos.Equipo" Collapsed="true">
+    <Position X="5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAABAAAAAAAAAAAAAAAABAAAAAAAAAAAgAAAAAAFA=</HashCode>
+      <FileName>Models\Equipos\Equipo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="proyecto_paradigmas_2025.Models.Cliente">
+    <Position X="11.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAEAAAAAABAAAEAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Models\Cliente.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="proyecto_paradigmas_2025.Models.Componente">
+    <Position X="11.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAgAAEgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Componente.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="proyecto_paradigmas_2025.Models.Reparacion">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CCAAAQACAAAAAIAAAACAAAAAABQABAAgAAAAAAAAIAg=</HashCode>
+      <FileName>Models\Reparacion.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Equipo" />
+      <Property Name="Cliente" />
+      <Property Name="Estado" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="RepuestosUsados" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Enum Name="proyecto_paradigmas_2025.Models.EstadoReparacion">
+    <Position X="6.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAEAAAAAAAAAAAAAAIKABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Reparacion.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
