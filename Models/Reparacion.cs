@@ -36,7 +36,8 @@ namespace proyecto_paradigmas_2025.Models
 
         // Nueva Propiedad Calculada: GANANCIA REAL
         // (Mano de Obra + (Precio Venta Repuesto - Precio Costo Repuesto))
-        public decimal GananciaNeta
+        
+        public decimal GananciaNeta  //Encapculamiento 
         {
             get
             {
@@ -49,7 +50,7 @@ namespace proyecto_paradigmas_2025.Models
             }
         }
 
-        public decimal TotalPagar
+        public decimal TotalPagar //Encapsulamiento
         {
             get
             {

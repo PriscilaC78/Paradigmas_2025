@@ -3,7 +3,7 @@
 namespace proyecto_paradigmas_2025.Models.Equipos
 {
     // ABSTRACTA: No puedes hacer "new Equipo()", debes crear un hijo.
-    public abstract class Equipo : EntidadBase
+    public abstract class Equipo : EntidadBase //Herencia de la clase Entidad Base y Abstraccion
     {
         public string Marca { get; set; }
         public string Modelo { get; set; }
@@ -15,7 +15,8 @@ namespace proyecto_paradigmas_2025.Models.Equipos
 
         // MÉTODO ABSTRACTO (Polimorfismo):
         // Obligamos a los hijos a definir cómo muestran sus datos técnicos específicos.
-        public abstract string ObtenerDatosEspecificos();
+        public abstract string ObtenerDatosEspecificos(); //Polimorfismo
+
 
         // Esto convierte el método en una Propiedad para que WPF pueda leerla.
         public string DatosTecnicos => ObtenerDatosEspecificos();

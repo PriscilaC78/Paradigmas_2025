@@ -81,7 +81,7 @@ namespace proyecto_paradigmas_2025.ViewModels
             });
 
             AgregarRepuestoCommand = new RelayCommand(AgregarRepuesto);
-            FacturarCommand = new RelayCommand(o => GenerarFactura());
+            FacturarCommand = new RelayCommand(o => GenerarFactura()); //Abstracion 
         }
 
         private void AgregarRepuesto(object obj)

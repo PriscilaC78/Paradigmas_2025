@@ -98,7 +98,7 @@ namespace proyecto_paradigmas_2025.ViewModels
             }
 
             // 3. Crear Equipo
-            Equipo equipoNuevo;
+            Equipo equipoNuevo; // Polimorfismo
             if (EsCelular)
             {
                 equipoNuevo = new Celular

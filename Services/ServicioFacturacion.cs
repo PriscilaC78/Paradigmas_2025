@@ -7,7 +7,7 @@ namespace proyecto_paradigmas_2025.Services
 {
     public static class ServicioFacturacion
     {
-        public static void GenerarFactura(Reparacion reparacion)
+        public static void GenerarFactura(Reparacion reparacion) //Abstraccion de detalles
         {
             // 1. Construimos el contenido del texto usando StringBuilder
             StringBuilder sb = new StringBuilder();

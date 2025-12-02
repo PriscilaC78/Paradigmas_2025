@@ -10,7 +10,7 @@ namespace proyecto_paradigmas_2025.Data
         private static AlmacenDatos _instancia;
 
         // Constructor Privado: Evita que alguien haga "new AlmacenDatos()" por error.
-        private AlmacenDatos()
+        private AlmacenDatos() //Encapsulamiento
         {
             Clientes = new List<Cliente>();
             Reparaciones = new List<Reparacion>();
@@ -32,8 +32,8 @@ namespace proyecto_paradigmas_2025.Data
         // ------------------------
 
         // Listas en Memoria (Tus tablas de BD)
-        public List<Cliente> Clientes { get; private set; }
-        public List<Reparacion> Reparaciones { get; private set; }
-        public List<Componente> Inventario { get; private set; }
+        public List<Cliente> Clientes { get; private set; } //Encapsulamiento
+        public List<Reparacion> Reparaciones { get; private set; } //Encapsulamiento
+        public List<Componente> Inventario { get; private set; } //Encapsulamiento
     }
 }
