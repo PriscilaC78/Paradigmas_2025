@@ -1,54 +1,95 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="proyecto_paradigmas_2025.Models.Equipos.Celular">
-    <Position X="7.25" Y="4.75" Width="1.5" />
+    <Position X="15.25" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAEAAAAAAAAAAAAAABAAAAAAAAAAIAAAAAABAAAAAAA=</HashCode>
       <FileName>Models\Equipos\Celular.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="proyecto_paradigmas_2025.Models.Equipos.Computadora">
-    <Position X="3" Y="5.5" Width="1.5" />
+    <Position X="19" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAEAAAAAAAAAAAAAAAAABAAAABAAAAAAAAAAAABAAAA=</HashCode>
       <FileName>Models\Equipos\Computadora.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="proyecto_paradigmas_2025.Models.Equipos.Equipo" Collapsed="true">
-    <Position X="5" Y="3.25" Width="1.5" />
+    <Position X="17" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAEAABAAAAAAAAAAAAAAAABAAAAAAAAAAAgAAAAAAFA=</HashCode>
       <FileName>Models\Equipos\Equipo.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="proyecto_paradigmas_2025.Models.Cliente">
-    <Position X="11.75" Y="3" Width="1.5" />
+    <Position X="12.5" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAAAAEAAAAAABAAAEAAAAAAAAAAgAAAAA=</HashCode>
       <FileName>Models\Cliente.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="proyecto_paradigmas_2025.Models.Componente">
-    <Position X="11.5" Y="6.75" Width="1.5" />
+    <Position X="13" Y="7.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAgAAEgAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\Componente.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="proyecto_paradigmas_2025.Models.Reparacion">
-    <Position X="9.25" Y="2.5" Width="1.5" />
+    <Position X="9.25" Y="4" Width="1.5" />
+    <InheritanceLine Type="proyecto_paradigmas_2025.Models.Base.EntidadBase" FixedToPoint="true">
+      <Path>
+        <Point X="15.25" Y="2.055" />
+        <Point X="15.25" Y="2.43" />
+        <Point X="11.125" Y="2.43" />
+        <Point X="11.125" Y="4.438" />
+        <Point X="10.75" Y="4.438" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
       <HashCode>CCAAAQACAAAAAIAAAACAAAAAABQABAAgAAAAAAAAIAg=</HashCode>
       <FileName>Models\Reparacion.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="Equipo" />
       <Property Name="Cliente" />
+      <Property Name="Equipo" />
       <Property Name="Estado" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
       <Property Name="RepuestosUsados" />
     </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="proyecto_paradigmas_2025.Models.Base.EntidadBase">
+    <Position X="14.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Base\EntidadBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="proyecto_paradigmas_2025.Data.AlmacenDatos">
+    <Position X="6.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAgAAAAAAACAAAAAAAAAAAAAEAABAAAAAAAA=</HashCode>
+      <FileName>Data\AlmacenDatos.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Clientes" />
+      <Property Name="Reparaciones" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="proyecto_paradigmas_2025.Services.ServicioFacturacion">
+    <Position X="4.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Services\ServicioFacturacion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="proyecto_paradigmas_2025.Data.GeneradorDatosFalsos">
+    <Position X="17.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\GeneradorDatosFalsos.cs</FileName>
+    </TypeIdentifier>
   </Class>
   <Enum Name="proyecto_paradigmas_2025.Models.EstadoReparacion">
     <Position X="6.5" Y="0.75" Width="1.5" />
